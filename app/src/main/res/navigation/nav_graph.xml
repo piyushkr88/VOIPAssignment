@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/incomingCallFragment">
+
+    <fragment
+        android:id="@+id/incomingCallFragment"
+        android:name="com.piyush.voipsimulation.ui.call.IncomingCallFragment"
+        android:label="Incoming Call">
+        <action
+            android:id="@+id/action_incoming_to_ongoing"
+            app:destination="@id/ongoingCallFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ongoingCallFragment"
+        android:name="com.piyush.voipsimulation.ui.call.OngoingCallFragment"
+        android:label="Ongoing Call">
+    <action
+        android:id="@+id/action_ongoing_to_callLog"
+        app:destination="@id/callLogFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/callLogFragment"
+        android:name="com.piyush.voipsimulation.ui.log.CallLogFragment"
+        android:label="Call Log"/>
+    <fragment
+        android:id="@+id/missedCallFragment"
+        android:name=""
+        android:label="Missed Call" />
+</navigation>
