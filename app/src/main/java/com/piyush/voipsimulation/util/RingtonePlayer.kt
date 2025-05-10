@@ -8,12 +8,13 @@ import android.util.Log
 
 object RingtonePlayer {
     private var ringtone: Ringtone? = null
-
+    private var isPlaying: Boolean = false
     fun play(context: Context) {
         try {
             val ringtoneUri: Uri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_RINGTONE)
             ringtone = RingtoneManager.getRingtone(context, ringtoneUri)
             ringtone?.play()
+            isPlaying = true
         } catch (e: Exception) {
             Log.e("RingtonePlayer", "Error playing ringtone: ${e.message}")
         }
@@ -21,6 +22,11 @@ object RingtonePlayer {
 
     fun stop() {
         ringtone?.stop()
+        isPlaying = false
+    }
+
+    fun isPlaying() : Boolean{
+        return isPlaying
     }
 }
 

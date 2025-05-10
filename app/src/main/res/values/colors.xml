@@ -2,4 +2,6 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="incomingCallColor">#71e679</color>
+    <color name="missedCallColor">#f20303</color>
 </resources>

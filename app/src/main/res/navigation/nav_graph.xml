@@ -24,8 +24,4 @@
         android:id="@+id/callLogFragment"
         android:name="com.piyush.voipsimulation.ui.log.CallLogFragment"
         android:label="Call Log"/>
-    <fragment
-        android:id="@+id/missedCallFragment"
-        android:name=""
-        android:label="Missed Call" />
 </navigation>

@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey
 data class CallLogEntity(
     @PrimaryKey(autoGenerate = true) val id: Int = 0,
     val callerName: String,
-    val callType: String, // "Missed" or "Answered"
+    val callType: String,
     val callStartTime: Long,
     val callEndTime: Long,
     val duration: Long
